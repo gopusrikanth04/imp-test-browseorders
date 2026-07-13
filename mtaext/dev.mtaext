@@ -29,7 +29,6 @@ modules:
               ServiceInstanceName: sapuidemoorderbrowser-html5-service-dev
               ServiceKeyName: sapuidemoorderbrowser-repo-host-key
               sap.cloud.service: sapuidemoorderbrowser
-
             - Authentication: OAuth2UserTokenExchange
               Name: sapuidemoorderbrowser_uaa
               ServiceInstanceName: sapuidemoorderbrowser-xsuaa-service-dev
