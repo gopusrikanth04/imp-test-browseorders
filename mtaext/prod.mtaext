@@ -18,3 +18,20 @@ resources:
   - name: sapuidemoorderbrowser-repo-host
     parameters:
       service-name: sapuidemoorderbrowser-html5-service-prod
+
+modules:
+  - name: sapuidemoorderbrowser-destination-content
+    parameters:
+      content:
+        instance:
+          destinations:
+            - Name: sapuidemoorderbrowser_html_repo_host
+              ServiceInstanceName: sapuidemoorderbrowser-html5-service-prod
+              ServiceKeyName: sapuidemoorderbrowser-repo-host-key
+              sap.cloud.service: sapuidemoorderbrowser
+
+            - Authentication: OAuth2UserTokenExchange
+              Name: sapuidemoorderbrowser_uaa
+              ServiceInstanceName: sapuidemoorderbrowser-xsuaa-service-prod
+              ServiceKeyName: sapuidemoorderbrowser-uaa-key
+              sap.cloud.service: sapuidemoorderbrowser
